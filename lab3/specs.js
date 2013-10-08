@@ -152,7 +152,6 @@ describe("Messages", function() {
       _triggerClickEvent(submit);
       _simulateInput(textArea, "message 2");
       _triggerClickEvent(submit);
-      console.log(messages.childNodes);
       expect(messages.childNodes.length).to.equal(2);
       expect(messages.childNodes[0].innerHTML).to.equal("message 2");
     });
