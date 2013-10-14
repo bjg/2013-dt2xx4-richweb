@@ -4,11 +4,15 @@ $("#messageText").on("keyup", function() {
 });
 
 $("#submit").on("click", function() {
-  var jqxhr = $.post("/messages", {"text": $("#messageText").val() }, function (data) {
+  $.post("/messages", {"text": $("#messageText").val() })
+  .done(function (data) {
     $('#messageList').prepend("<li>" + data.text + "</li>");
-  }).fail(function() {
-    alert("Error when saving message to server")
+  })
+  .fail(function() {
+    alert("Error when saving message to server");
+  })
+  .always(function() {
+    $("#messageText").val("");
+    $("#messageCounter").html(140);
   });
-  $("#messageText").val("");
-  $("#messageCounter").html(140);
 });
