@@ -1,0 +1,16 @@
+<% layout('../boilerplate') -%>
+
+<textarea name="messageText" id="messageText" cols="50" rows="3"></textarea>
+<div id="messageCounter">140</div>
+<input type="submit" id="submit" value="Submit"/>
+<table>
+    <tbody id="messageList">
+        <% messages.forEach(function(m) { %>
+            <tr data-id="<%= m._id %>">
+               <td class="messageEntry"><%= m.text %></td>
+               <td><a class="messageEdit" href="javascript:void(0)"><i class="icon-edit"></i></a></td>
+               <td><a class="messageRemove" href="javascript:void(0)"><i class="icon-remove"></i></a></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>

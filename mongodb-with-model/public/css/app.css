@@ -1,0 +1,41 @@
+body {
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    font-size: 120%;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+}
+
+#messageText {
+    border-radius: 5px;
+}
+
+#submit {
+    font-size: 1.5em;
+}
+
+#messageList {
+    margin-top: 20px;
+    list-style-type: none;
+    min-height: 200px;
+}
+
+.messageEntry {
+    width: 80%;
+}
+.messageEdit, .messageDelete {
+    width: 10%;
+}
+
+header {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+header, footer {
+    background-color: lightgrey;
+}
