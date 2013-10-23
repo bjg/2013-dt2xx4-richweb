@@ -1,0 +1,18 @@
+<% layout('../boilerplate') -%>
+
+<textarea ng-model="inputText" cols="50" rows="3" id="messageText" ></textarea>
+<div>{{ counter() }}</div>
+<input class="btn btn-primary" type="submit" value="Submit" ng-click="update()"/>
+<div class="container">
+    <div class="row">
+        <table>
+            <tbody>
+                <tr ng-repeat="message in messages">
+                    <td>{{message.text}}</td>
+                    <td><a ng-click="edit($index)"><i class="icon-edit"></i></a></td>
+                    <td><a ng-click="remove($index)"><i class="icon-remove"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
