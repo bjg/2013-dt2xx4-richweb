@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js
+"></script>
+    <script src="js/mocha.js"></script>
+    <script src="js/chai.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="js/specs.js"></script>
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
