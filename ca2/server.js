@@ -16,7 +16,6 @@ app.set('views', path.join(__dirname, 'app'));
 app.set('view engine', 'ejs');
 app.use(express.favicon());
 app.use(express.logger('dev'));
-app.use(express.bodyParser());
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
@@ -41,5 +40,12 @@ app.post('/calendar/:entries', entry.create);
 app.put('/calendar/:entries/:id', entry.update);
 app.del('/calendar/:entries/:id', entry.remove);
 
-// Grunt is directing the startup
+// If Grunt is directing the startup then we need the
+// following line
 module.exports = app;
+
+// If running standalone, then uncomment the following
+// two lines
+//app.listen(9000);
+//console.log('Express server listening on port 9000');
+
